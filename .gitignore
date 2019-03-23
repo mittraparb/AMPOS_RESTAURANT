@@ -1,3 +1,9 @@
 .gradle/
 .idea/
 gradle/
+build/
+cache.db/
+certificates/
+out/
+logs/
+store_lock
