@@ -22,12 +22,18 @@ repositories {
     mavenCentral()
 }
 
+wrapper {
+    gradleVersion = '5.2.1'
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-data-neo4j")
-    compile "org.springframework.boot:spring-boot-starter"
-    compile "org.springframework.boot:spring-boot-starter-log4j2"
-    compile "org.springframework.boot:spring-boot-starter-webflux"
+    compile("org.springframework.boot:spring-boot-starter")
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile group: 'org.neo4j', name: 'neo4j', version: '3.5.3'
+    compileOnly "org.projectlombok:lombok"
+    annotationProcessor "org.projectlombok:lombok"
+
 }
