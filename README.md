@@ -6,6 +6,7 @@ Sample Request for using the API.
 
 Path: /api/menu
 Method POST - Create Hawaiian Pizza.
+```json
 {
 	"name" : "Hawaiian Pizza",
 	"description" : "All-time favourite toppings, Hawaiian pizza in Tropical Hawaii style.",
@@ -18,9 +19,11 @@ Method POST - Create Hawaiian Pizza.
 		{ "name": "Pineapple" }
 	]
 }
+```
 
 Path: /api/menu
 Method POST - Create Chicken Tom Yum Pizza.
+```json
 {
 	"name" : "Chicken Tom Yum Pizza",
 	"description" : "Best marinated chicken with pineapple and mushroom on Spicy Lemon sauce. Enjoy our tasty Thai style pizza.",
@@ -35,9 +38,11 @@ Method POST - Create Chicken Tom Yum Pizza.
 		{ "name": "Spicy" }
 	]
 }
+```
 
 Path: /api/menu
 Method POST - Create Kimchi.
+```json
 {
 	"name" : "Kimchi",
 	"description" : "Traditional side dish made from salted and fermented vegetables",
@@ -52,9 +57,11 @@ Method POST - Create Kimchi.
 		{ "name": "Spicy" }
 	]
 }
+```
 
 Path: /api/menu
 Method PATCH - Update Chicken Tom Yum Pizza.
+```json
 {
 	"name" : "Chicken Tom Yum Pizza",
 	"description" : "Best marinated chicken with pineapple and mushroom on Spicy Lemon sauce. Enjoy our tasty Thai style pizza.",
@@ -71,6 +78,7 @@ Method PATCH - Update Chicken Tom Yum Pizza.
 		{ "name": "Fusion" }
 	]
 }
+```
 
 Get all menu - Method GET
 Path: /api/menu/page/{page}/size/{size}
@@ -83,12 +91,13 @@ Page start with 0, size is result per page
 Search menu by keyword - Method Get
 Path: /api/menu/search/{keyword}
 
-Delete menu - Method DELETE
+#Delete menu - Method DELETE
 Path: /api/menu/{menuName}
 Note: menu cannot be deleted when it's associated with bill.
 
 Path: /api/bill
 Method Post - Create Bill with associate to menu.
+```json
 {
 	"orderMenus" : [
 		{
@@ -101,9 +110,11 @@ Method Post - Create Bill with associate to menu.
 		}
 	]
 }
+```
 
 Path: /api/bill
 Method Patch - Upadate Bill with associate to menu.
+```json
 {
 	"buid": "e851b40f-caa4-4f61-807a-0a736c754550",
 	"orderMenus" : [
@@ -117,6 +128,7 @@ Method Patch - Upadate Bill with associate to menu.
 		}
 	]
 }
+```
 
 Method - GET
 Path: /api/bills
